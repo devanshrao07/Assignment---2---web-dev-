@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.parent-card {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+h1 {
+    text-align: center;
+    color: #f1f5ff;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    width: 100%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #d1d5ff;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #6366f1;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #4f46e5;
+}
+
+.weather-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-left: 4px solid #6366f1;
+    margin-bottom: 8px;
+    background: #f4f6ff;
+    border-radius: 6px;
+}
+
+.history button {
+    margin: 6px;
+    padding: 7px 16px;
+    border-radius: 20px;
+    background: #e0e7ff;
+    color: #1e1e2f;
+    font-size: 13px;
+}
+
+.history button:hover {
+    background: #c7d2fe;
+}
+
+@media (max-width:700px) {
+    .parent-card {
+        flex-direction: column;
+    }
+}
