@@ -5,92 +5,127 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    min-height: 100vh;
     padding: 30px;
+    color: #fff;
 }
 
+/* Container */
 .container {
     max-width: 1200px;
     margin: auto;
 }
 
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/* Layout */
 .parent-card {
     display: flex;
     gap: 25px;
     align-items: flex-start;
 }
 
-h1 {
-    text-align: center;
-    color: #f1f5ff;
-    margin-bottom: 30px;
-}
-
+/* Glass Card */
 .card {
-    background: #ffffff;
-    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
     padding: 25px;
     width: 100%;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    transition: 0.3s;
 }
 
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Input Group */
 .input-group {
     display: flex;
     gap: 12px;
+    margin-bottom: 15px;
 }
 
+/* Input */
 input {
     flex: 1;
     padding: 12px;
-    border-radius: 8px;
-    border: 2px solid #d1d5ff;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
     font-size: 14px;
 }
 
-input:focus {
-    border-color: #6366f1;
-    outline: none;
+input::placeholder {
+    color: #cbd5f5;
 }
 
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #818cf8;
+}
+
+/* Button */
 button {
     padding: 12px 20px;
-    background: #6366f1;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
+    font-weight: 500;
 }
 
 button:hover {
-    background: #4f46e5;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(99,102,241,0.4);
 }
 
+/* Weather Items */
 .weather-item {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    border-left: 4px solid #6366f1;
-    margin-bottom: 8px;
-    background: #f4f6ff;
-    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    border-left: 4px solid #818cf8;
+    transition: 0.2s;
 }
 
+.weather-item:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* History Buttons */
 .history button {
     margin: 6px;
-    padding: 7px 16px;
+    padding: 8px 16px;
     border-radius: 20px;
-    background: #e0e7ff;
-    color: #1e1e2f;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
     font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .history button:hover {
-    background: #c7d2fe;
+    background: rgba(255,255,255,0.25);
 }
 
-@media (max-width:700px) {
+/* Responsive */
+@media (max-width: 700px) {
     .parent-card {
         flex-direction: column;
     }
